@@ -1,0 +1,32 @@
+apiname: "api"
+apihost: "skills.city"
+replicaCount: 1
+imagereposync:
+  name: sync-repo
+  repository: kupolua/sync-repo
+  tag: latest
+  pullPolicy: IfNotPresent
+imagenodejs:
+  name: node
+  repository: node
+  tag: 7.8-alpine
+  pullPolicy: IfNotPresent
+env:
+  webuipath: "api"
+  gitrepourl: "https://github.com/kupolua/Skills.City.git"
+  gitbranch: "develop"
+  gitreposynctime: "10"
+service:
+  name: api-port
+  type: LoadBalancer
+  externalPort: 3000
+  internalPort: 3000
+strategy:
+  rollingUpdate:
+    maxSurge: 1
+    maxUnavailable: 1
+  type: RollingUpdate
+volumes:
+  volumename: www-data
+  volumepath: /www-data
+restartPolicy: Always
