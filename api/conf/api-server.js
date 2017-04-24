@@ -10,11 +10,15 @@ app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
 
 app.get('/api', function(req, res){
-    var API = require('../js/api.js');
 
-    var api = new API();
+    var Login = require('../js/api.js');
+    var login = new Login();
+    var respBody = req.query;
 
-    res.send(api.get(req.query));
+    login.get(respBody, function(response) {
+        res.json(response);
+    });
+
 });
 
 app.listen(3000, function () {

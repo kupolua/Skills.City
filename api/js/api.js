@@ -15,31 +15,51 @@ var fs = require('fs'),
         password : db_password
     });
 
-function PaperGerberaTemplateBuilder() {
+
+function Login(){
+    var query = function (respBody, callback) {
+        connection.query('SELECT * FROM users', function(error, results, fields){
+            if (error) throw error;
+
+            callback(results[0]);
+        });
+    };
 
     return {
-        get: function (reqQuery) {
-
-            var responseData = {
-                id: "id",
-                login: "login",
-                db_host: db_host,
-                db_login: db_login,
-                db_password: db_password,
-                db_name: db_name,
-                reqQuery: reqQuery,
-                dbResponse: ''
-            };
-
-            connection.query('SELECT * FROM users', function(error, results, fields){
-                if (error) throw error;
-
-                responseData.dbResponse = results[0];
-            });
-
-            return responseData;
+        get: function (respBody, callback) {
+            query(respBody, callback);
         }
     };
 }
 
-module.exports = PaperGerberaTemplateBuilder;
+module.exports = Login;
+
+//
+// function PaperGerberaTemplateBuilder() {
+//
+//     return {
+//         get: function (reqQuery) {
+//
+//             var responseData = {
+//                 id: "id",
+//                 login: "login",
+//                 db_host: db_host,
+//                 db_login: db_login,
+//                 db_password: db_password,
+//                 db_name: db_name,
+//                 reqQuery: reqQuery,
+//                 dbResponse: ''
+//             };
+//
+//             connection.query('SELECT * FROM users', function(error, results, fields){
+//                 if (error) throw error;
+//
+//                 responseData.dbResponse = results[0];
+//             });
+//
+//             return responseData;
+//         }
+//     };
+// }
+//
+// module.exports = PaperGerberaTemplateBuilder;
