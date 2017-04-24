@@ -64,18 +64,18 @@ spec:
         - name: DB_HOST
           valueFrom:
             secretKeyRef:
-              name: ukrainecomua-mysql
-              key: host
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbHost }}
         - name: DB_LOGIN
           valueFrom:
             secretKeyRef:
-              name: ukrainecomua-mysql
-              key: username
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbUsername }}
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: ukrainecomua-mysql
-              key: password
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbPassword }}
       volumes:
         - name: {{ .Values.volumes.volumename }}
           emptyDir: {}
