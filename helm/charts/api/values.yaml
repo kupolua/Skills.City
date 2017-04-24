@@ -18,6 +18,7 @@ env:
   gitreposynctime: "10"
   secretKeyRefName: ukrainecomua-mysql
   dbHost: host
+  dbName: database
   dbUsername: username
   dbPassword: password
 service:

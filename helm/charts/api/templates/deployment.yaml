@@ -66,6 +66,11 @@ spec:
             secretKeyRef:
               name: {{ .Values.env.secretKeyRefName }}
               key: {{ .Values.env.dbHost }}
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbName }}
         - name: DB_LOGIN
           valueFrom:
             secretKeyRef:
