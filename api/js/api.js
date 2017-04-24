@@ -27,12 +27,14 @@ function PaperGerberaTemplateBuilder() {
                 db_login: db_login,
                 db_password: db_password,
                 db_name: db_name,
-                reqQuery: reqQuery
+                reqQuery: reqQuery,
+                dbResponse: ''
             };
 
-            connection.query('show tables', function(error, results, fields){
-                console.log(results);
+            connection.query('SELECT * FROM users', function(error, results, fields){
                 if (error) throw error;
+
+                responseData.dbResponse = results[0];
             });
 
             return responseData;
