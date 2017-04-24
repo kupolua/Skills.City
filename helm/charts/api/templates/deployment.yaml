@@ -50,22 +50,6 @@ spec:
       containers:
       - name: {{ .Chart.Name }}-{{ .Values.imagenodejs.name }}
         image: "{{ .Values.imagenodejs.repository }}:{{ .Values.imagenodejs.tag }}"
-        env:
-          - name: DB_HOST
-            valueFrom:
-              secretKeyRef:
-                name: ukrainecomua-mysql
-                key: host
-          - name: DB_LOGIN
-            valueFrom:
-              secretKeyRef:
-                name: ukrainecomua-mysql
-                key: username
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: ukrainecomua-mysql
-                key: password
         imagePullPolicy: {{ .Values.imagenodejs.pullPolicy }}
         command:
         - sh
@@ -77,6 +61,21 @@ spec:
         env:
         - name: WEBUI_PATH
           value: {{ .Values.env.apipath }}
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: ukrainecomua-mysql
+              key: host
+        - name: DB_LOGIN
+          valueFrom:
+            secretKeyRef:
+              name: ukrainecomua-mysql
+              key: username
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: ukrainecomua-mysql
+              key: password
       volumes:
         - name: {{ .Values.volumes.volumename }}
           emptyDir: {}
