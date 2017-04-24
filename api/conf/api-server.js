@@ -2,6 +2,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     cors = require ('cors'),
     path = require('path'),
+    mysql = require('mysql'),
     app = express();
 
 app.use(bodyParser.json());

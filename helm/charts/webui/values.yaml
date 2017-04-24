@@ -13,7 +13,7 @@ imagenginxlua:
 env:
   webuipath: "webui"
   gitrepourl: "https://github.com/kupolua/Skills.City.git"
-  gitbranch: "master"
+  gitbranch: "develop"
   gitreposynctime: "10"
 service:
   name: webui-port
