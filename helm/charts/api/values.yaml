@@ -16,6 +16,11 @@ env:
   gitrepourl: "https://github.com/kupolua/Skills.City.git"
   gitbranch: "develop"
   gitreposynctime: "10"
+  secretKeyRefName: ukrainecomua-mysql
+  dbHost: host
+  dbName: database
+  dbUsername: username
+  dbPassword: password
 service:
   name: api-port
   type: LoadBalancer

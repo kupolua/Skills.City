@@ -61,6 +61,26 @@ spec:
         env:
         - name: WEBUI_PATH
           value: {{ .Values.env.apipath }}
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbHost }}
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbName }}
+        - name: DB_LOGIN
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbUsername }}
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Values.env.secretKeyRefName }}
+              key: {{ .Values.env.dbPassword }}
       volumes:
         - name: {{ .Values.volumes.volumename }}
           emptyDir: {}
