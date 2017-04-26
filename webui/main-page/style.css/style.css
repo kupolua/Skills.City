@@ -1,0 +1,67 @@
+/*BODY Почему-то не работает..*/
+body{
+	background-color:#283a3b;
+}
+.header,.footer{
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+.header{
+	height:auto;
+	background:#f4cb67;
+}
+
+/*РАЗМЕРЫ ЛОГОТИПА*/
+.logo{
+    height:80px;
+}
+/*РАЗМЕРЫ МЕНЮ*/
+
+.navbar{
+	position: relative;
+	height: auto;
+	top: 20px;
+}
+.navbar .navbar-nav > li > a{ /*Навигация*/
+	color: #000080;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.log{
+	height: 80px;
+}
+.signIn{
+	position: relative;
+	top:30px;
+}
+.content{
+	background:#c6ccb2;
+	height:auto;
+	margin-bottom:20px;
+}
+
+.slider-img{
+	height:1024px;
+	width:1200px;
+}
+
+p{
+	font-size:20px;
+}
+
+.footer{
+	height: 50px;
+	background:#6bba7c;
+}
+
+.text-muted{
+		color:black;
+}
+
+@media only screen and (min-width: 992px) {
+	.description{
+		color:white;
+
+	}
+}

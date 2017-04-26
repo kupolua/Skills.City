@@ -20,6 +20,7 @@ function Login(){
     var query = function (respBody, callback) {
         connection.query('SELECT * FROM users', function(error, results, fields){
             if (error) throw error;
+            console.log(results[0])
 
             callback(results[0]);
         });

@@ -1,0 +1,257 @@
+<!---->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>My page</title>
+
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="style.css/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="row header">
+				<!--Логотип-->
+				<div class="col-md-3 col-sm-3 logo">
+				    <img src="images/logo.png" class="img-responsive" alt="Responsive image">
+				</div>
+
+				<!--Навигация-->
+			  	<div class="col-md-7 col-sm-7">
+			    	<div class="navbar navbar-collapse" role="navigation">
+				    	<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Тесты<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">HTML</a></li>
+									<li><a href="#">CSS</a></li>
+									<li><a href="#">Java Script</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Еще!</a></li>
+								</ul>
+							</li>
+				            <li><a href="#">Советы</a></li>
+				            <li><a href="#">О нас</a></li>
+				        </ul>
+			        </div>
+			    </div>
+
+			    <div class="col-md-2 col-sm-2 log">
+			    	
+			    	<a href="#myModal" class="btn btn-default signIn" data-toggle="modal">Войти</a> 
+		    		<!-- Модальное окно -->
+					<div id="myModal" class="modal fade">
+						<div class="modal-dialog">
+						    <div class="modal-content">
+						      <!-- Заголовок модального окна -->
+						        <div class="modal-header">
+						        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						        	<h4 class="modal-title">Введите свои данные</h4>
+						        </div>
+						      	<!-- Основное содержимое модального окна -->
+						     	<div class="modal-body">
+						        	<form class="form-signin" role="form">
+							        	<input type="email" class="form-control" placeholder="Email address" required autofocus>
+							        	<input type="password" class="form-control" placeholder="Password" required>
+							    	</form>
+						        </div>
+						      	<!-- Футер модального окна -->
+						      	<div class="modal-footer">
+						        	<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						        	<a href="#signIn" class="btn btn-primary" data-toggle="modal">Войти</a>
+
+						        	<div id="signIn" class="modal fade">
+									    <div class="modal-dialog">
+									    	<div class="modal-content">
+									      	<!-- Заголовок модального окна -->
+									      		<div class="modal-header">
+									        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									        		<h4 class="modal-title">Добро пожаловать!!!</h4>
+									     		</div>
+									    	</div>
+									    </div>
+									</div>
+						      	</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="content">
+				<!--Слайдер-->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    			 	<ol class="carousel-indicators">
+				        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				        <li data-target="#myCarousel" data-slide-to="1"></li>
+				        <li data-target="#myCarousel" data-slide-to="2"></li>
+			      	</ol>
+			      	<div class="carousel-inner">
+			        	<div class="item active">
+			          		<img src="images/sider.jpg" class="slider-img" alt="First slide">
+			          		<div class="container">
+			            		<div class="carousel-caption">
+			              			<h1>Прикоснись к технологиям</h1>
+			              				<p>Вставай с дивана и начни обучение в сфере WEB!</p>
+			              				<p><a class="btn btn-lg btn-primary" href="#" role="button">Подробнее</a></p>
+			            		</div>
+			          		</div>
+			        	</div>
+			        	<div class="item">
+					        <img src="images/Front-End.jpg" class="slider-img" alt="Second slide">
+					        <div class="container">
+					            <div class="carousel-caption">
+					              	<h1>Проверь себя</h1>
+					              	<p>Оцени свои знания Frontend либо Backand разработки</p>
+					              	<p><a class="btn btn-lg btn-primary" href="#" role="button">Подробнее</a></p>
+					            </div>
+					        </div>
+				        </div>
+			        	<div class="item">
+			          		<img src="images/fullstack.jpg" class="slider-img" alt="Third slide">
+			          		<div class="container">
+			            		<div class="carousel-caption">
+			              			<h1>Развивайся</h1>
+			              			<p>Получи Full stack набор программиста</p>
+			              			<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+			            		</div>
+			          		</div>
+			        	</div>
+			      	</div>
+			      	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			      	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			    </div><!--Конец слайдера-->
+
+
+			    <div class="examples">
+			    
+			        <!--План-->
+				    <div class="col-md-8 col-md-offset-2 col-sm-6">
+	                	<h2 class="text-center description">Пользуйся планом</h2>
+	                	<p class="text-center description">Ты будешь изучать метериал назначеный твоим ментором.</p>
+	                	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+	                  		<div class="panel panel-default">
+	                    		<div class="panel-heading" role="tab" id="headingOne">
+	                      			<h4 class="panel-title">
+	                      			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  
+	                      			Сегодня</a></h4>
+	                    		</div>
+		                    	<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+		                      		<div class="panel-body">
+		                        		<p>Переменные JS </p>
+		                      		</div>
+		                    	</div>
+	                  		</div>
+
+		                  	<div class="panel panel-default">
+		                    	<div class="panel-heading" role="tab" id="headingTwo">
+		                      		<h4 class="panel-title">
+		                        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		                        	Завтра</a></h4>
+		                    	</div>
+		                    	<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		                      		<div class="panel-body">
+		                        		<p>Операторы</p>
+		                      		</div>
+		                    	</div>
+		                  	</div>
+
+	                  		<div class="panel panel-default">
+	                    		<div class="panel-heading" role="tab" id="headingThree">
+	                      			<h4 class="panel-title">
+	                        		<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	                        		Послезавтра</a></h4>
+	                    		</div>
+	                    	<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                      		<div class="panel-body">
+	                        		<p>Выражения</p>
+	                     		</div>
+	                    	</div>
+	                  		</div>
+						</div>
+					</div><!--Конец плана-->
+					
+					<!--Успеваимость-->
+					<div class="col-md-3  col-md-offset-1 col-sm-6">
+
+						<h2 class="text-center description">Следи за своей успеваимостью</h2>
+	                	<p class="text-center description">Иди в ногу со своей командой, выполняй задания в срок и конечно же успешно выполняй тесты.</p>
+
+			            <div class="progress">
+			              <div class="progress-bar progress-bar-danger" style="width: 10%">
+			                <span class="sr-only">10% Complete (Danger)</span>
+			              </div>
+			              <div class="progress-bar progress-bar-warning" style="width: 15%">
+			                <span class="sr-only">15% Complete (warning)</span>
+			              </div>
+			              <div class="progress-bar progress-bar-success" style="width: 60%">
+			                <span class="sr-only">60% Complete (success)</span>
+			              </div>
+			            </div>
+			        </div>
+			        <!--Конец успеваимость-->
+			        
+			        <!--Таски-->
+			        <div class="col-md-3 col-md-offset-4 ">
+			        	<h2 class="text-center description">Таски</h2>
+	                	<p class="text-center description">Веди четкий порядок и отчетность своих действий</p>
+			            <form class="text-center form-horizontal">
+			                <fieldset>
+			                  	<div class="control-group">
+			                    	<label class="control-label description" for="selectbasic">План</label>
+			                    	<div class="controls">
+			                      		<select id="selectbasic" name="selectbasic" class="input-xlarge">
+					                        <option>04/05/2017</option>
+					                        <option>05/05/2017</option>
+					                        <option>06/05/2017</option>
+					                        <option>07/05/2017</option>
+			                      		</select>
+			                    	</div>
+			                  	</div>
+
+			                    <!-- Select Multiple -->
+			                  	<div class="control-group">
+			                    	<label class="control-label description" for="selectmultiple">Таски</label>
+			                    	<div class="controls">
+			                      		<select id="selectmultiple" name="selectmultiple" class="input-xlarge" multiple="multiple">
+					                        <option>Задание 1</option>
+					                        <option>Задание 2</option>
+					                        <option>Задание 3</option>
+			                      		</select>
+			                    	</div>
+			                  	</div>
+
+				                <!-- Button -->
+				                <div class="control-group">
+			                    	<label class="control-label" for="consulta"></label>
+			                      	<div class="controls">
+			                        	<button id="consulta" name="consulta" class="btn btn-primary">Выполнить</button>
+			                      	</div>
+			                    </div>
+			                </fieldset>
+			            </form>
+			        </div><!--Конец тасков-->
+				</div>
+			</div>
+
+
+
+
+		  	
+		  	<div class="col-md-12 footer">
+		    	<p class="text-muted"> &copy; INDICATOR 2017</p>
+		    </div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  	<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
