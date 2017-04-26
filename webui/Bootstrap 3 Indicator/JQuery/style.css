@@ -1,0 +1,15 @@
+﻿.click {
+	color: aquamarine;
+	background:#CCCCCC;
+}
+#clickme { 
+width:300px; 
+border:1px solid gray; 
+padding:3px; 
+cursor:pointer
+}
+#robot {
+	width:600px;
+	height:400px;
+	padding:10px;
+}
