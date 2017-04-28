@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A educational project of Deepidea training center.
+name: api
+version: 0.1.0

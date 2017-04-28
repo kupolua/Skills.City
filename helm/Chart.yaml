@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Educational project of Deepidea training center.
+name: skills-city
+version: 0.1.0
